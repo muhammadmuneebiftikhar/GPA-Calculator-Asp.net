@@ -1,13 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FormulaTable.aspx.cs" Inherits="GPA_Calculator.FormulaTable" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/GPACalc.Master" AutoEventWireup="true" CodeBehind="FormulaTable.aspx.cs" Inherits="GPA_Calculator.FormulaTable" %>
 
-<!DOCTYPE html>
+<asp:Content ID="title" ContentPlaceHolderID="TitleContentPlaceHolder" runat="server">Formula</asp:Content>
+<asp:Content ID="h1Tag" ContentPlaceHolderID="h1ContentPlaceHolder" runat="server">Formula Table</asp:Content>
+<asp:Content ID="BreadCrumb" ContentPlaceHolderID="BreadContentPlaceHolder" runat="server">Formula</asp:Content>
+<asp:Content ID="mainForm" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Formula Table</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
     <h1 class="text-center focus">NUML GPA CALCULATOR</h1>
     <form id="form1" runat="server">
         <div class="text-center">
@@ -15,5 +12,5 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+
+</asp:Content>

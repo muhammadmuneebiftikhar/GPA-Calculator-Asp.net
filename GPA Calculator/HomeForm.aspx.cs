@@ -45,5 +45,10 @@ namespace GPA_Calculator
         {
             Session.Clear();
         }
+
+        protected void btnDocuments_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GpaCalculator.Master");
+        }
     }
 }

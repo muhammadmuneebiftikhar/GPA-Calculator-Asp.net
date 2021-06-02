@@ -10,7 +10,7 @@
 
 namespace GPA_Calculator
 {
-    public partial class About
+    public partial class TextPage
     {
     }
 }

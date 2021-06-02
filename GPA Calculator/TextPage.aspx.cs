@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace GPA_Calculator
 {
-    public partial class SiteMaster : MasterPage
+    public partial class TextPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

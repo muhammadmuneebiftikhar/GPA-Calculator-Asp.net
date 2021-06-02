@@ -1,14 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CGPAForm.aspx.cs" Inherits="GPA_Calculator.CGPA" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/GPACalc.Master" AutoEventWireup="true" CodeBehind="CGPAForm.aspx.cs" Inherits="GPA_Calculator.CGPA" %>
 
-<!DOCTYPE html>
+<asp:Content ID="title" ContentPlaceHolderID="TitleContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="h1Tag" ContentPlaceHolderID="h1ContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="BreadCrumb" ContentPlaceHolderID="BreadContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="mainForm" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Login Form</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-    <h1 class="text-center Bold">NUML GPA CALCULATOR</h1>
     <form id="form1" runat="server">
         <table class="table  text-center">
             <tr>
@@ -54,7 +50,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-default text-right" OnClick="btnBack_Click" />
+                    <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-dark text-right" OnClick="btnBack_Click" />
                 </td>
                 <td></td>
             </tr>
@@ -68,5 +64,5 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+
+</asp:Content>

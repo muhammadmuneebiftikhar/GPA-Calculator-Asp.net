@@ -1,14 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sgpaByMarks.aspx.cs" Inherits="GPA_Calculator.sgpaByMarks" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/GPACalc.Master" AutoEventWireup="true" CodeBehind="sgpaByMarks.aspx.cs" Inherits="GPA_Calculator.sgpaByMarks" %>
 
-<!DOCTYPE html>
+<asp:Content ID="title" ContentPlaceHolderID="TitleContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="h1Tag" ContentPlaceHolderID="h1ContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="BreadCrumb" ContentPlaceHolderID="BreadContentPlaceHolder" runat="server">CGPA</asp:Content>
+<asp:Content ID="mainForm" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>SgpaByMarks</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-    <h1 class="text-center focus">NUML GPA CALCULATOR</h1>
     <form id="form1" runat="server">
         <table class="table  text-center container">
             <tr>
@@ -62,8 +58,8 @@
             <tr class="text-center">
                 <td></td>
                 <td>
-                    <asp:TextBox ID="textCR" CssClass="hidden" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txtPoints" CssClass="hidden" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textCR" Visible="false" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPoints" Visible="false" runat="server"></asp:TextBox>
                     <asp:TextBox ID="txtMarks_SGPA" runat="server"></asp:TextBox>
                 </td>
                 <td>
@@ -73,35 +69,13 @@
             <tr>
                 <td></td>
                 <td>
-                    <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-black text-right" OnClick="btnBack_Click"/>
+                    <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-dark text-right" OnClick="btnBack_Click"/>
                 </td>
                 <td></td>
             </tr>
             <tr>
-                <td colspan="3"></td>
-            </tr>
-            <tr>
                 <th colspan="3">
-                </th>
-            </tr>
-            <tr>
-                <th colspan="3">
-                </th>
-            </tr>
-            <tr>
-                <th colspan="3">
-                </th>
-            </tr>
-            <tr>
-                <th colspan="3">
-                </th>
-            </tr>
-            <tr>
-                <td class="text-center">
-                    <label class="text-center form-control">Logout :: ------>>></label>
-                </td>
-                <th colspan="2">
-                    <asp:Button ID="btnLogot" runat="server" Text="Logout" Width="800px" CssClass="btn btn-black text-center" OnClick="btnLogot_Click"/>
+                    <asp:Button ID="btnLogot" runat="server" Text="Logout" Width="800px" CssClass="btn btn-dark text-center" OnClick="btnLogot_Click"/>
                 </th>
             </tr>
 
@@ -111,5 +85,5 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+
+</asp:Content>
