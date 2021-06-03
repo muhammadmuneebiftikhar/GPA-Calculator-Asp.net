@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
+
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -43,9 +44,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="FormulaTable.aspx" class="nav-link">Formula</a>
                 </li>
-            </ul>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="AddToCart.aspx" class="nav-link">Buy_Doc</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="LoginForm.aspx" class="nav-link btn btn-dark" style="color:white">Logout</a>
+                </li>
 
-         </nav>
+            </ul>
+        </nav>
         
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-blue elevation-4">
@@ -63,7 +70,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="dist/img/1613247418837.jpeg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Muhammad Muneeb</a>
+          <a href="ProductAdmin.aspx" class="d-block">Muhammad Muneeb</a>
         </div>
       </div>
 
@@ -86,6 +93,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="FormulaTable.aspx" class="nav-link">Formula</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="AddToCart.aspx" class="nav-link">Buy_Doc</a>
                 </li>
             </ul>
           </li>
@@ -155,6 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
         </footer>
     </div>
+
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->

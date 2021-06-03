@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddToCart.aspx" />
     <Content Include="CGPAForm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -163,7 +164,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HomeForm.aspx" />
     <Content Include="Images\books.jpg" />
-    <Content Include="Images\charpai.jpeg" />
     <Content Include="Images\video.jpg" />
     <Content Include="LoginForm.aspx" />
     <Content Include="plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
@@ -179,6 +179,8 @@
     <Content Include="plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
     <Content Include="plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="GPACalc.Master" />
+    <Content Include="ProductAdmin.aspx" />
+    <Content Include="RemoveFromCart.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="plugins\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="plugins\fontawesome-free\css\all.min.css" />
@@ -223,6 +225,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CGPAForm.aspx.cs">
@@ -263,6 +272,13 @@
     <Compile Include="HomeForm.aspx.designer.cs">
       <DependentUpon>HomeForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAdmin.aspx.cs">
+      <DependentUpon>ProductAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductAdmin.aspx.designer.cs">
+      <DependentUpon>ProductAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.aspx.cs">
       <DependentUpon>RegisterForm.aspx</DependentUpon>
@@ -270,6 +286,13 @@
     </Compile>
     <Compile Include="RegisterForm.aspx.designer.cs">
       <DependentUpon>RegisterForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFromCart.Master.cs">
+      <DependentUpon>RemoveFromCart.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveFromCart.Master.designer.cs">
+      <DependentUpon>RemoveFromCart.Master</DependentUpon>
     </Compile>
     <Compile Include="sgpaByGrades.aspx.cs">
       <DependentUpon>sgpaByGrades.aspx</DependentUpon>
