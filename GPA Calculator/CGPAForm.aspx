@@ -20,7 +20,7 @@
                     <label class="form-control text-right">Semester :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtSemester" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSemester" placeholder="Semester" runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -28,7 +28,7 @@
                     <label class="form-control text-right">SGPA :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtSgpa" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSgpa" placeholder="SGPA" runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr class="text-center">

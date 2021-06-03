@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RemoveFromCart.master.cs" Inherits="GPA_Calculator.RemoveFromCart" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+   <webopt:BundleReference runat="server" Path="~/Content/css" />
+  
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        ul.dropdown-cart {
+            min-width: 250px;
+        }
+
+            ul.dropdown-cart li .item {
+                display: block;
+                padding: 3px 10px;
+                margin: 3px 0;
+            }
+
+                ul.dropdown-cart li .item:hover {
+                    background: #f3f3f3;
+                }
+
+                ul.dropdown-cart li .item:after {
+                    visibility: hidden;
+                    display: block;
+                    font-size: 0;
+                    content: "";
+                    clear: both;
+                    height: 0;
+                }
+
+            ul.dropdown-cart li .item-left {
+                float: left;
+            }
+
+                ul.dropdown-cart li .item-left img,
+                ul.dropdown-cart li .item-left span.item-info {
+                    float: left;
+                }
+
+                ul.dropdown-cart li .item-left span.item-info {
+                    margin-left: 10px;
+                }
+
+                    ul.dropdown-cart li .item-left span.item-info span {
+                        display: block;
+                    }
+
+            ul.dropdown-cart .item-right {
+                float: right;
+            }
+
+            ul.dropdown-cart li .item-right {
+                margin-top: 14px;
+            }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="AddToCart.aspx">Documents</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="HomeForm.aspx" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="CGPAForm.aspx" class="nav-link">CGPA</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="sgpaByGrades.aspx" class="nav-link">S_Grades</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="sgpaByMarks.aspx" class="nav-link">S_Marks</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="FormulaTable.aspx" class="nav-link">Formula</a>
+                </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+          <%= (AppProps.cart)Session["cart"]!=null?((AppProps.cart)Session["cart"]).totalQty.ToString():"0" %> - Items
+        </a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <asp:DataList ID="DataList1" runat="server" RepeatLayout="Flow" RepeatDirection="Horizontal">
+                                    <ItemTemplate>
+                                        <li>
+                                            <span class="item">
+                                                <span class="item-left">
+                                                        <img src="./Images/<%# ((AppProps.myProduct)Container.DataItem).product.Image.ToString() %>
+                                                        alt='<%#((AppProps.myProduct)Container.DataItem).product.Name.ToString() %>'
+                                                        style="max-height: 250p max-width:75px;" />
+                                                    <span class="item-info">
+                                                        <span><%#((AppProps.myProduct)Container.DataItem).product.Name.ToString() %></span>
+                                                        <span>Unit Price:<%#((AppProps.myProduct)Container.DataItem).product.Price.ToString() %></span>
+                                                        <span>Quantity:<%#((AppProps.myProduct)Container.DataItem).quantity.ToString() %></span>
+                                                        <span>Sub-Total:<%#((AppProps.myProduct)Container.DataItem).subTotal.ToString() %></span>
+                                                    </span>
+                                                </span>
+                                                <span class="item-right">
+                                                    <asp:Button ID="btnRemoveFromCart" runat="server" 
+                                                        Text="x" CssClass="btn btn-xs btn-danger pull-right" 
+                                                        OnCommand="btnRemoveFromCart_Command"
+                                                        CommandName="removeFromCart"
+                                                        CommandArgument='<%#((AppProps.myProduct)Container.DataItem).product.Id.ToString()%>' />
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                                <li>
+                                    <span class="item">
+                                        <span class="item-left">Total Items:</span>
+                                        <span class="item-right">
+                                            <%=(AppProps.cart)Session["cart"]!=null?((AppProps.cart)Session["cart"]).totalQty.ToString():"0" %>
+
+                                        </span>
+                                    </span>
+                                </li>
+                                 <li>
+                                    <span class="item">
+                                        <span class="item-left">Total Price:</span>
+                                        <span class="item-right">
+                                            <%=(AppProps.cart)Session["cart"]!=null?((AppProps.cart)Session["cart"]).totalPrice.ToString():"0" %>
+
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#" class="text-center">View Cart</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        </div>
+</nav>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
+
+

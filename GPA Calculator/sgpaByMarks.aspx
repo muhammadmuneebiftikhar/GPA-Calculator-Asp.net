@@ -20,23 +20,23 @@
                     <label class="form-control text-right">Semester :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtSemester" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSemester" placeholder="Semester" runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <th>
-                    <label class="form-control text-right">Subjects :</label>
+                    <label class="form-control text-right">Subject :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtSubject" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSubject" placeholder="Subject" runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <th>
-                    <label class="form-control text-right">Credit_Hours :</label>
+                    <label class="form-control text-right">Credit_Hour :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtCR" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCR" runat="server" placeholder="Credit Hour i.e: 2, 3, 4" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -44,7 +44,7 @@
                     <label class="form-control text-right">Marks :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtMarks" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtMarks" runat="server" placeholder="Marks" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr class="text-center">
@@ -61,9 +61,9 @@
                     <asp:TextBox ID="textCR" Visible="false" runat="server"></asp:TextBox>
                     <asp:TextBox ID="txtPoints" Visible="false" runat="server"></asp:TextBox>
                     <asp:TextBox ID="txtMarks_SGPA" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnCal_SGPA" runat="server" Text="Calculate_SGPA" CssClass="btn btn-danger text-center" OnClick="btnCal_SGPA_Click"/>
                 </td>
                 <td>
-                    <asp:Button ID="btnCal_SGPA" runat="server" Text="Calculate_SGPA" CssClass="btn btn-danger text-center" OnClick="btnCal_SGPA_Click"/>
                 </td>
             </tr>
             <tr>

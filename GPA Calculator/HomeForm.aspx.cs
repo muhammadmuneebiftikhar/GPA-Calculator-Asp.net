@@ -48,7 +48,7 @@ namespace GPA_Calculator
 
         protected void btnDocuments_Click(object sender, EventArgs e)
         {
-            Response.Redirect("GpaCalculator.Master");
+            Response.Redirect("AddToCart.aspx");
         }
     }
 }
