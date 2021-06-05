@@ -8,7 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <h1 class="text-center focus">NUML GPA CALCULATOR</h1>
+    <h1 class="text-center focus">NUML APP</h1>
     <form id="form1" runat="server">
         <table class="table  text-center">
             <tr>
@@ -16,7 +16,7 @@
                     <label class="form-control text-right">Name :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control" required></asp:TextBox>
 
                 </td>
             </tr>
@@ -25,7 +25,7 @@
                     <label class="form-control text-right">Roll No :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtRollNo" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtRollNo"  required runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -33,7 +33,7 @@
                     <label class="form-control text-right">Password :</label>
                 </th>
                 <td colspan="2">
-                    <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword"  required TextMode="Password" runat="server" class="form-control"></asp:TextBox>
                 </td>
             </tr>
             <tr>

@@ -21,5 +21,17 @@ namespace BusinessLogicLayer
         {
             return pDAL.SearchProductsDAL(p);
         }
+        public DataTable GETProductsBLL(product p)
+        {
+            return pDAL.GETProductsDAL(p);
+        }
+        public bool DeleteProductsBLL(product p)
+        {
+            return pDAL.DeleteProductsDAL(p);
+        }
+        public bool InsertProductBLL(product p)
+        {
+            return pDAL.insertProduct(p);
+        }
     }
 }
