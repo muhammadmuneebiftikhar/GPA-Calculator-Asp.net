@@ -10,6 +10,7 @@
 
     <div class="row">
         <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+
             <ItemTemplate>
                 <div class="col-xs-6 col-md-3">
                     <div class="thumbnail">
@@ -27,6 +28,7 @@
                                 <p class="card-text">Description : <%# Eval("Description") %></p>
                                 <asp:Button ID="btnAddtoCart"
                                     runat="server"
+
                                     Text="Add to Cart"
                                     OnCommand="btnAddtoCart_Command"
                                     CommandName="viewdetails"

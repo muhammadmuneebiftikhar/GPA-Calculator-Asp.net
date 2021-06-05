@@ -50,7 +50,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="LoginForm.aspx" class="nav-link btn btn-dark" style="color:white">Logout</a>
                 </li>
-
             </ul>
         </nav>
         
