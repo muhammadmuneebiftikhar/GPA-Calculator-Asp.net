@@ -129,9 +129,8 @@
                                         <li>
                                             <span class="item">
                                                 <span class="item-left">
-                                                        <img src="./Images/<%# ((AppProps.myProduct)Container.DataItem).product.Image.ToString() %>
+                                                        <img src="./Images/<%# ((AppProps.myProduct)Container.DataItem).product.Image.ToString() %>"
                                                         alt='<%#((AppProps.myProduct)Container.DataItem).product.Name.ToString() %>'
-
                                                         style="max-height: 250px; max-width:75px;" />
                                                     <span class="item-info">
                                                         <span><%#((AppProps.myProduct)Container.DataItem).product.Name.ToString() %></span>
